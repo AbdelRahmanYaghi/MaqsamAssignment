@@ -1,0 +1,82 @@
+{
+    "qwen3:8b.json": {
+        "English Scores": {
+            "Accuracy": 0.8666666666666667,
+            "Distance": 2,
+            "Precision": 0.888888888888889,
+            "Recall": 0.8666666666666667
+        },
+        "Arabic Scores": {
+            "Accuracy": 0.7333333333333333,
+            "Distance": 5,
+            "Precision": 0.7916666666666666,
+            "Recall": 0.7333333333333334
+        },
+        "Mixed Scores": {
+            "Accuracy": 0.8,
+            "Distance": 3.5,
+            "Precision": 0.8402777777777778,
+            "Recall": 0.8
+        }
+    },
+    "deepseek-r1:8b.json": {
+        "English Scores": {
+            "Accuracy": 0.8666666666666667,
+            "Distance": 2,
+            "Precision": 0.888888888888889,
+            "Recall": 0.8666666666666667
+        },
+        "Arabic Scores": {
+            "Accuracy": 0.7333333333333333,
+            "Distance": 4,
+            "Precision": 0.7277777777777779,
+            "Recall": 0.7333333333333334
+        },
+        "Mixed Scores": {
+            "Accuracy": 0.8,
+            "Distance": 3.0,
+            "Precision": 0.8083333333333333,
+            "Recall": 0.8
+        }
+    },
+    "gemma3:4b.json": {
+        "English Scores": {
+            "Accuracy": 0.8,
+            "Distance": 3,
+            "Precision": 0.7944444444444444,
+            "Recall": 0.7999999999999999
+        },
+        "Arabic Scores": {
+            "Accuracy": 0.5333333333333333,
+            "Distance": 9,
+            "Precision": 0.5648148148148148,
+            "Recall": 0.5333333333333333
+        },
+        "Mixed Scores": {
+            "Accuracy": 0.6666666666666667,
+            "Distance": 6.0,
+            "Precision": 0.6796296296296296,
+            "Recall": 0.6666666666666666
+        }
+    },
+    "hf.cotensorblockPhi-4-mini-instruct-abliterated-GGUF:Q8_0.json": {
+        "English Scores": {
+            "Accuracy": 0.6,
+            "Distance": 6,
+            "Precision": 0.5694444444444444,
+            "Recall": 0.6
+        },
+        "Arabic Scores": {
+            "Accuracy": 0.6666666666666666,
+            "Distance": 5,
+            "Precision": 0.44642857142857145,
+            "Recall": 0.6666666666666666
+        },
+        "Mixed Scores": {
+            "Accuracy": 0.6333333333333333,
+            "Distance": 5.5,
+            "Precision": 0.5079365079365079,
+            "Recall": 0.6333333333333333
+        }
+    }
+}

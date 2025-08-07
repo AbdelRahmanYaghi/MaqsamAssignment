@@ -1,0 +1,31 @@
+Summary,Sentiment,Language
+اتصل العميل للاستفسار عن سبب تأخر شحن الطلب. قام الموظف بالتحقق وأخبره أن هناك تأخيراً من شركة التوصيل، وطمأنه بأن الطرد في الطريق.,Neutral,Arabic
+العميل غاضب بسبب انقطاع الخدمة المتكرر خلال الأسبوع الماضي. الموظف حاول تهدئته وأبلغ الفريق الفني، لكن العميل أنهى المكالمة وهو غير راضٍ.,Negative,Arabic
+اتصل العميل لتحديث بيانات بطاقة الدفع الخاصة به. تمت العملية بسهولة، وشكر العميل الموظف على سرعته.,Positive,Arabic
+العميل طلب إلغاء الاشتراك في الخدمة. شرح له الموظف العواقب والإجراءات وتم الإلغاء دون مشاكل.,Neutral,Arabic
+اشتكى العميل من أنه لم يتلقَ فاتورة هذا الشهر. تحقق الموظف ووجد خللاً تقنياً، وأرسل الفاتورة عبر البريد الإلكتروني فوراً.,Positive,Arabic
+العميل غير راضٍ عن جودة المنتج الذي استلمه، وطلب استرداد المبلغ. رفض الموظف الطلب بسبب تجاوز فترة الإرجاع.,Negative,Arabic
+العميل استفسر عن الفرق بين باقتين من باقات الإنترنت. الموظف أوضح المزايا والفروقات بكل وضوح، والعميل قال إنه سيقرر لاحقاً.,Neutral,Arabic
+اتصل العميل لتقديم شكوى عن تعامل أحد الموظفين في الفرع. الموظف استمع للشكوى وسجلها لرفعها للإدارة.,Negative,Arabic
+العميل عبّر عن رضاه عن خدمة الدعم المقدمة سابقًا، وأراد شكر الموظف بالاسم.,Positive,Arabic
+العميل اتصل لتفعيل خدمة جديدة. الموظف أكمل الإجراءات خلال دقائق والعميل عبّر عن سعادته بسهولة العملية.,Positive,Arabic
+العميل اتصل ليبلغ عن عملية شراء تمت بدون علمه. بعد التحقيق، تبين أن أحد أفراد عائلته استخدم الحساب. لم يغضب العميل، لكنه طالب بتفعيل طبقة حماية إضافية.,Neutral,Arabic
+العميل بدأ المكالمة بغضب بسبب انقطاع مفاجئ للخدمة، لكنه بعد شرح الموظف أن السبب يعود لصيانة مقررة مسبقًا تم التنبيه عنها بالبريد، اعتذر العميل عن نبرته.,Positive,Arabic
+"العميل طلب خصم خاص لأنه ""عميل قديم""، لكن النظام لا يسمح إلا بعروض محددة. الموظف حاول مساعدته لكنه لم يتمكن من تجاوز السياسة. العميل شكر الموظف لكنه عبّر عن خيبة أمله.",Negative,Arabic
+العميل يواجه مشكلة نادرة في التطبيق لم يسبق تسجيلها من قبل. الموظف استغرق وقتًا لفهم الوضع، وطلب تسجيل الشاشة لإرسالها للفريق التقني. العميل لم ينفعل، لكن بدا عليه الإحباط.,Neutral,Arabic
+الموظف أخبر العميل أن استرداد المبلغ سيأخذ 10 أيام، لكن العميل أصرّ أن الدعم السابق وعده بـ3 أيام فقط. لم يتم التأكد من كلام العميل، وانتهت المكالمة دون اتفاق.,Negative,Arabic
+"The customer called about a billing discrepancy on their last invoice. The support agent reviewed the charges, confirmed an error, and issued a refund. The customer thanked the agent for resolving the issue quickly.",Positive,English
+"The customer was frustrated due to repeated internet outages. The support agent apologized and escalated the issue to the technical department, but no immediate fix was available.",Negative,English
+The customer asked how to reset their account password. The support agent walked them through the process successfully without issue.,Neutral,English
+"The customer complained about poor service at a physical store location. The agent documented the complaint and assured them it would be forwarded to management, but the customer remained dissatisfied.",Negative,English
+"The customer inquired about upgrading their subscription plan. The support agent explained available options, and the customer agreed to upgrade.",Positive,English
+"The customer was confused about a promotional offer they received. The agent clarified the terms, and the customer said they would think about it before deciding.",Neutral,English
+"The customer had been charged after canceling a service. The agent verified the timeline, apologized, and processed a full refund. The customer appreciated the resolution.",Positive,English
+"The customer wanted to transfer their service to a new address, but the agent informed them the service wasn’t available in that area. The customer expressed disappointment.",Negative,English
+The customer called to check the status of a delayed shipment. The agent provided tracking details and estimated delivery. The customer acknowledged the update and ended the call politely.,Neutral,English
+The customer praised a previous support experience and called to give positive feedback. The agent thanked them and filed the compliment.,Positive,English
+"The customer called to complain about being charged twice. After a long investigation, it turned out they had subscribed with two different emails. The customer seemed embarrassed but appreciated the clarity.",Neutral,English
+"The customer was upset about a technician not showing up for an appointment. The agent offered to reschedule with priority, but the customer said they’d “think about staying with the company.”",Negative,English
+"The customer had a feature request that’s not supported. The agent politely noted it as feedback, but the customer insisted on knowing why it's not implemented. The agent remained calm, but the customer left unconvinced.",Neutral,English
+"A customer reported receiving the wrong item. The agent processed a replacement immediately, but the customer said, ""This keeps happening with you guys,"" though they still accepted the solution.",Negative,English
+The customer called to cancel their subscription. The agent asked a few questions and discovered the issue was due to a misunderstanding. The customer agreed to stay after clarification.,Positive,English

@@ -1,0 +1,186 @@
+{
+    "Arabic": [
+        {
+            "summary": "\u0627\u062a\u0635\u0644 \u0627\u0644\u0639\u0645\u064a\u0644 \u0644\u0644\u0627\u0633\u062a\u0641\u0633\u0627\u0631 \u0639\u0646 \u0633\u0628\u0628 \u062a\u0623\u062e\u0631 \u0634\u062d\u0646 \u0627\u0644\u0637\u0644\u0628. \u0642\u0627\u0645 \u0627\u0644\u0645\u0648\u0638\u0641 \u0628\u0627\u0644\u062a\u062d\u0642\u0642 \u0648\u0623\u062e\u0628\u0631\u0647 \u0623\u0646 \u0647\u0646\u0627\u0643 \u062a\u0623\u062e\u064a\u0631\u0627\u064b \u0645\u0646 \u0634\u0631\u0643\u0629 \u0627\u0644\u062a\u0648\u0635\u064a\u0644\u060c \u0648\u0637\u0645\u0623\u0646\u0647 \u0628\u0623\u0646 \u0627\u0644\u0637\u0631\u062f \u0641\u064a \u0627\u0644\u0637\u0631\u064a\u0642.",
+            "predicted_sentiment": "Negative",
+            "true_sentiment": "Neutral",
+            "justification": "Although the customer was updated that there is a delay from shipping company, but assuring them of correct address on delivery might indicate slight negativity."
+        },
+        {
+            "summary": "\u0627\u0644\u0639\u0645\u064a\u0644 \u063a\u0627\u0636\u0628 \u0628\u0633\u0628\u0628 \u0627\u0646\u0642\u0637\u0627\u0639 \u0627\u0644\u062e\u062f\u0645\u0629 \u0627\u0644\u0645\u062a\u0643\u0631\u0631 \u062e\u0644\u0627\u0644 \u0627\u0644\u0623\u0633\u0628\u0648\u0639 \u0627\u0644\u0645\u0627\u0636\u064a. \u0627\u0644\u0645\u0648\u0638\u0641 \u062d\u0627\u0648\u0644 \u062a\u0647\u062f\u0626\u062a\u0647 \u0648\u0623\u0628\u0644\u063a \u0627\u0644\u0641\u0631\u064a\u0642 \u0627\u0644\u0641\u0646\u064a\u060c \u0644\u0643\u0646 \u0627\u0644\u0639\u0645\u064a\u0644 \u0623\u0646\u0647\u0649 \u0627\u0644\u0645\u0643\u0627\u0644\u0645\u0629 \u0648\u0647\u0648 \u063a\u064a\u0631 \u0631\u0627\u0636\u064d.",
+            "predicted_sentiment": "Negative",
+            "true_sentiment": "Negative",
+            "justification": "The customer is angry due to the repeated service interruption during last week and ended up unsatisfied even after being pacified by a staff member who called his team."
+        },
+        {
+            "summary": "\u0627\u062a\u0635\u0644 \u0627\u0644\u0639\u0645\u064a\u0644 \u0644\u062a\u062d\u062f\u064a\u062b \u0628\u064a\u0627\u0646\u0627\u062a \u0628\u0637\u0627\u0642\u0629 \u0627\u0644\u062f\u0641\u0639 \u0627\u0644\u062e\u0627\u0635\u0629 \u0628\u0647. \u062a\u0645\u062a \u0627\u0644\u0639\u0645\u0644\u064a\u0629 \u0628\u0633\u0647\u0648\u0644\u0629\u060c \u0648\u0634\u0643\u0631 \u0627\u0644\u0639\u0645\u064a\u0644 \u0627\u0644\u0645\u0648\u0638\u0641 \u0639\u0644\u0649 \u0633\u0631\u0639\u062a\u0647.",
+            "predicted_sentiment": "Positive",
+            "true_sentiment": "Positive",
+            "justification": "The customer had a smooth experience with updating their payment card and appreciated the speed of assistance from an employee, indicating satisfaction."
+        },
+        {
+            "summary": "\u0627\u0644\u0639\u0645\u064a\u0644 \u0637\u0644\u0628 \u0625\u0644\u063a\u0627\u0621 \u0627\u0644\u0627\u0634\u062a\u0631\u0627\u0643 \u0641\u064a \u0627\u0644\u062e\u062f\u0645\u0629. \u0634\u0631\u062d \u0644\u0647 \u0627\u0644\u0645\u0648\u0638\u0641 \u0627\u0644\u0639\u0648\u0627\u0642\u0628 \u0648\u0627\u0644\u0625\u062c\u0631\u0627\u0621\u0627\u062a \u0648\u062a\u0645 \u0627\u0644\u0625\u0644\u063a\u0627\u0621 \u062f\u0648\u0646 \u0645\u0634\u0627\u0643\u0644.",
+            "predicted_sentiment": "Positive",
+            "true_sentiment": "Neutral",
+            "justification": "Although the customer had an issue (request for cancellation), they accepted without any problems when informed about potential consequences by a friendly staff member, suggesting satisfaction with resolution."
+        },
+        {
+            "summary": "\u0627\u0634\u062a\u0643\u0649 \u0627\u0644\u0639\u0645\u064a\u0644 \u0645\u0646 \u0623\u0646\u0647 \u0644\u0645 \u064a\u062a\u0644\u0642\u064e \u0641\u0627\u062a\u0648\u0631\u0629 \u0647\u0630\u0627 \u0627\u0644\u0634\u0647\u0631. \u062a\u062d\u0642\u0642 \u0627\u0644\u0645\u0648\u0638\u0641 \u0648\u0648\u062c\u062f \u062e\u0644\u0644\u0627\u064b \u062a\u0642\u0646\u064a\u0627\u064b\u060c \u0648\u0623\u0631\u0633\u0644 \u0627\u0644\u0641\u0627\u062a\u0648\u0631\u0629 \u0639\u0628\u0631 \u0627\u0644\u0628\u0631\u064a\u062f \u0627\u0644\u0625\u0644\u0643\u062a\u0631\u0648\u0646\u064a \u0641\u0648\u0631\u0627\u064b.",
+            "predicted_sentiment": "Positive",
+            "true_sentiment": "Positive",
+            "justification": "\u0627\u0644\u0625\u0628\u0644\u0627\u063a \u0639\u0646 \u062e\u0637\u0623 \u062a\u0642\u0646\u064a \u0648\u0625\u0631\u0633\u0627\u0644\u0647 \u0627\u0644\u0641\u0627\u062a\u0648\u0631\u0629 \u0628\u0633\u0631\u0639\u0629 \u064a\u0639\u0643\u0633 \u062e\u062f\u0645\u0629 \u0645\u0645\u062a\u0627\u0632\u0629\u060c \u0645\u0645\u0627 \u064a\u0624\u062f\u064a \u0625\u0644\u0649 \u0634\u0639\u0648\u0631 \u0625\u064a\u062c\u0627\u0628\u064a \u0628\u0627\u0644\u0646\u0628\u064a\u0630."
+        },
+        {
+            "summary": "\u0627\u0644\u0639\u0645\u064a\u0644 \u063a\u064a\u0631 \u0631\u0627\u0636\u064d \u0639\u0646 \u062c\u0648\u062f\u0629 \u0627\u0644\u0645\u0646\u062a\u062c \u0627\u0644\u0630\u064a \u0627\u0633\u062a\u0644\u0645\u0647\u060c \u0648\u0637\u0644\u0628 \u0627\u0633\u062a\u0631\u062f\u0627\u062f \u0627\u0644\u0645\u0628\u0644\u063a. \u0631\u0641\u0636 \u0627\u0644\u0645\u0648\u0638\u0641 \u0627\u0644\u0637\u0644\u0628 \u0628\u0633\u0628\u0628 \u062a\u062c\u0627\u0648\u0632 \u0641\u062a\u0631\u0629 \u0627\u0644\u0625\u0631\u062c\u0627\u0639.",
+            "predicted_sentiment": "Negative",
+            "true_sentiment": "Negative",
+            "justification": "The customer is dissatisfied with the quality of product received, requested a refund and it's beyond due date which employee refused."
+        },
+        {
+            "summary": "\u0627\u0644\u0639\u0645\u064a\u0644 \u0627\u0633\u062a\u0641\u0633\u0631 \u0639\u0646 \u0627\u0644\u0641\u0631\u0642 \u0628\u064a\u0646 \u0628\u0627\u0642\u062a\u064a\u0646 \u0645\u0646 \u0628\u0627\u0642\u0627\u062a \u0627\u0644\u0625\u0646\u062a\u0631\u0646\u062a. \u0627\u0644\u0645\u0648\u0638\u0641 \u0623\u0648\u0636\u062d \u0627\u0644\u0645\u0632\u0627\u064a\u0627 \u0648\u0627\u0644\u0641\u0631\u0648\u0642\u0627\u062a \u0628\u0643\u0644 \u0648\u0636\u0648\u062d\u060c \u0648\u0627\u0644\u0639\u0645\u064a\u0644 \u0642\u0627\u0644 \u0625\u0646\u0647 \u0633\u064a\u0642\u0631\u0631 \u0644\u0627\u062d\u0642\u0627\u064b.",
+            "predicted_sentiment": "Positive",
+            "true_sentiment": "Neutral",
+            "justification": "The employee provided a clear explanation of the differences between two internet packages, prompting positive feedback from the client who decided to make future choices."
+        },
+        {
+            "summary": "\u0627\u062a\u0635\u0644 \u0627\u0644\u0639\u0645\u064a\u0644 \u0644\u062a\u0642\u062f\u064a\u0645 \u0634\u0643\u0648\u0649 \u0639\u0646 \u062a\u0639\u0627\u0645\u0644 \u0623\u062d\u062f \u0627\u0644\u0645\u0648\u0638\u0641\u064a\u0646 \u0641\u064a \u0627\u0644\u0641\u0631\u0639. \u0627\u0644\u0645\u0648\u0638\u0641 \u0627\u0633\u062a\u0645\u0639 \u0644\u0644\u0634\u0643\u0648\u0649 \u0648\u0633\u062c\u0644\u0647\u0627 \u0644\u0631\u0641\u0639\u0647\u0627 \u0644\u0644\u0625\u062f\u0627\u0631\u0629.",
+            "predicted_sentiment": "Negative",
+            "true_sentiment": "Negative",
+            "justification": "\u0627\u0644\u0634\u0643\u0631\u0648\u0649 \u0645\u0646 \u0627\u0644\u0639\u0645\u064a\u0644 \u0643\u0627\u0646\u062a \u0645\u0634\u0641\u0642\u0629 \u0636\u062f \u062a\u0641\u0627\u0639\u0644\u0627\u062a \u0645\u0648\u0638\u0641 \u0645\u0639\u064a\u0646."
+        },
+        {
+            "summary": "\u0627\u0644\u0639\u0645\u064a\u0644 \u0639\u0628\u0651\u0631 \u0639\u0646 \u0631\u0636\u0627\u0647 \u0639\u0646 \u062e\u062f\u0645\u0629 \u0627\u0644\u062f\u0639\u0645 \u0627\u0644\u0645\u0642\u062f\u0645\u0629 \u0633\u0627\u0628\u0642\u064b\u0627\u060c \u0648\u0623\u0631\u0627\u062f \u0634\u0643\u0631 \u0627\u0644\u0645\u0648\u0638\u0641 \u0628\u0627\u0644\u0627\u0633\u0645.",
+            "predicted_sentiment": "Positive",
+            "true_sentiment": "Positive",
+            "justification": "The customer's expression of satisfaction regarding the previous support service indicates a positive sentiment towards that experience."
+        },
+        {
+            "summary": "\u0627\u0644\u0639\u0645\u064a\u0644 \u0627\u062a\u0635\u0644 \u0644\u062a\u0641\u0639\u064a\u0644 \u062e\u062f\u0645\u0629 \u062c\u062f\u064a\u062f\u0629. \u0627\u0644\u0645\u0648\u0638\u0641 \u0623\u0643\u0645\u0644 \u0627\u0644\u0625\u062c\u0631\u0627\u0621\u0627\u062a \u062e\u0644\u0627\u0644 \u062f\u0642\u0627\u0626\u0642 \u0648\u0627\u0644\u0639\u0645\u064a\u0644 \u0639\u0628\u0651\u0631 \u0639\u0646 \u0633\u0639\u0627\u062f\u062a\u0647 \u0628\u0633\u0647\u0648\u0644\u0629 \u0627\u0644\u0639\u0645\u0644\u064a\u0629.",
+            "predicted_sentiment": "Positive",
+            "true_sentiment": "Positive",
+            "justification": "Customer expressed happiness with the process and positive outcome."
+        },
+        {
+            "summary": "\u0627\u0644\u0639\u0645\u064a\u0644 \u0627\u062a\u0635\u0644 \u0644\u064a\u0628\u0644\u063a \u0639\u0646 \u0639\u0645\u0644\u064a\u0629 \u0634\u0631\u0627\u0621 \u062a\u0645\u062a \u0628\u062f\u0648\u0646 \u0639\u0644\u0645\u0647. \u0628\u0639\u062f \u0627\u0644\u062a\u062d\u0642\u064a\u0642\u060c \u062a\u0628\u064a\u0646 \u0623\u0646 \u0623\u062d\u062f \u0623\u0641\u0631\u0627\u062f \u0639\u0627\u0626\u0644\u062a\u0647 \u0627\u0633\u062a\u062e\u062f\u0645 \u0627\u0644\u062d\u0633\u0627\u0628. \u0644\u0645 \u064a\u063a\u0636\u0628 \u0627\u0644\u0639\u0645\u064a\u0644\u060c \u0644\u0643\u0646\u0647 \u0637\u0627\u0644\u0628 \u0628\u062a\u0641\u0639\u064a\u0644 \u0637\u0628\u0642\u0629 \u062d\u0645\u0627\u064a\u0629 \u0625\u0636\u0627\u0641\u064a\u0629.",
+            "predicted_sentiment": "Positive",
+            "true_sentiment": "Neutral",
+            "justification": "Although there was an unauthorized transaction, the client accepted it without getting angry and requested for additional security measures."
+        },
+        {
+            "summary": "\u0627\u0644\u0639\u0645\u064a\u0644 \u0628\u062f\u0623 \u0627\u0644\u0645\u0643\u0627\u0644\u0645\u0629 \u0628\u063a\u0636\u0628 \u0628\u0633\u0628\u0628 \u0627\u0646\u0642\u0637\u0627\u0639 \u0645\u0641\u0627\u062c\u0626 \u0644\u0644\u062e\u062f\u0645\u0629\u060c \u0644\u0643\u0646\u0647 \u0628\u0639\u062f \u0634\u0631\u062d \u0627\u0644\u0645\u0648\u0638\u0641 \u0623\u0646 \u0627\u0644\u0633\u0628\u0628 \u064a\u0639\u0648\u062f \u0644\u0635\u064a\u0627\u0646\u0629 \u0645\u0642\u0631\u0631\u0629 \u0645\u0633\u0628\u0642\u064b\u0627 \u062a\u0645 \u0627\u0644\u062a\u0646\u0628\u064a\u0647 \u0639\u0646\u0647\u0627 \u0628\u0627\u0644\u0628\u0631\u064a\u062f\u060c \u0627\u0639\u062a\u0630\u0631 \u0627\u0644\u0639\u0645\u064a\u0644 \u0639\u0646 \u0646\u0628\u0631\u062a\u0647.",
+            "predicted_sentiment": "Positive",
+            "true_sentiment": "Positive",
+            "justification": "Although the client initially called in anger because of an unexpected service interruption, upon being informed by a customer support agent that it was due to scheduled maintenance for which they received prior warning via email, and apologized on their behalf, there has been resolution."
+        },
+        {
+            "summary": "\u0627\u0644\u0639\u0645\u064a\u0644 \u0637\u0644\u0628 \u062e\u0635\u0645 \u062e\u0627\u0635 \u0644\u0623\u0646\u0647 \"\u0639\u0645\u064a\u0644 \u0642\u062f\u064a\u0645\"\u060c \u0644\u0643\u0646 \u0627\u0644\u0646\u0638\u0627\u0645 \u0644\u0627 \u064a\u0633\u0645\u062d \u0625\u0644\u0627 \u0628\u0639\u0631\u0648\u0636 \u0645\u062d\u062f\u062f\u0629. \u0627\u0644\u0645\u0648\u0638\u0641 \u062d\u0627\u0648\u0644 \u0645\u0633\u0627\u0639\u062f\u062a\u0647 \u0644\u0643\u0646\u0647 \u0644\u0645 \u064a\u062a\u0645\u0643\u0646 \u0645\u0646 \u062a\u062c\u0627\u0648\u0632 \u0627\u0644\u0633\u064a\u0627\u0633\u0629. \u0627\u0644\u0639\u0645\u064a\u0644 \u0634\u0643\u0631 \u0627\u0644\u0645\u0648\u0638\u0641 \u0644\u0643\u0646\u0647 \u0639\u0628\u0651\u0631 \u0639\u0646 \u062e\u064a\u0628\u0629 \u0623\u0645\u0644\u0647.",
+            "predicted_sentiment": "Negative",
+            "true_sentiment": "Negative",
+            "justification": "Although the customer expressed gratitude to the employee for making an effort, they still showed disappointment due to not being able to secure a special discount because of system restrictions."
+        },
+        {
+            "summary": "\u0627\u0644\u0639\u0645\u064a\u0644 \u064a\u0648\u0627\u062c\u0647 \u0645\u0634\u0643\u0644\u0629 \u0646\u0627\u062f\u0631\u0629 \u0641\u064a \u0627\u0644\u062a\u0637\u0628\u064a\u0642 \u0644\u0645 \u064a\u0633\u0628\u0642 \u062a\u0633\u062c\u064a\u0644\u0647\u0627 \u0645\u0646 \u0642\u0628\u0644. \u0627\u0644\u0645\u0648\u0638\u0641 \u0627\u0633\u062a\u063a\u0631\u0642 \u0648\u0642\u062a\u064b\u0627 \u0644\u0641\u0647\u0645 \u0627\u0644\u0648\u0636\u0639\u060c \u0648\u0637\u0644\u0628 \u062a\u0633\u062c\u064a\u0644 \u0627\u0644\u0634\u0627\u0634\u0629 \u0644\u0625\u0631\u0633\u0627\u0644\u0647\u0627 \u0644\u0644\u0641\u0631\u064a\u0642 \u0627\u0644\u062a\u0642\u0646\u064a. \u0627\u0644\u0639\u0645\u064a\u0644 \u0644\u0645 \u064a\u0646\u0641\u0639\u0644\u060c \u0644\u0643\u0646 \u0628\u062f\u0627 \u0639\u0644\u064a\u0647 \u0627\u0644\u0625\u062d\u0628\u0627\u0637.",
+            "predicted_sentiment": "Negative",
+            "true_sentiment": "Neutral",
+            "justification": "Despite the lack of action from the customer, they appeared frustrated during a rare issue with their application that had never been recorded before."
+        },
+        {
+            "summary": "\u0627\u0644\u0645\u0648\u0638\u0641 \u0623\u062e\u0628\u0631 \u0627\u0644\u0639\u0645\u064a\u0644 \u0623\u0646 \u0627\u0633\u062a\u0631\u062f\u0627\u062f \u0627\u0644\u0645\u0628\u0644\u063a \u0633\u064a\u0623\u062e\u0630 10 \u0623\u064a\u0627\u0645\u060c \u0644\u0643\u0646 \u0627\u0644\u0639\u0645\u064a\u0644 \u0623\u0635\u0631\u0651 \u0623\u0646 \u0627\u0644\u062f\u0639\u0645 \u0627\u0644\u0633\u0627\u0628\u0642 \u0648\u0639\u062f\u0647 \u0628\u06403 \u0623\u064a\u0627\u0645 \u0641\u0642\u0637. \u0644\u0645 \u064a\u062a\u0645 \u0627\u0644\u062a\u0623\u0643\u062f \u0645\u0646 \u0643\u0644\u0627\u0645 \u0627\u0644\u0639\u0645\u064a\u0644\u060c \u0648\u0627\u0646\u062a\u0647\u062a \u0627\u0644\u0645\u0643\u0627\u0644\u0645\u0629 \u062f\u0648\u0646 \u0627\u062a\u0641\u0627\u0642.",
+            "predicted_sentiment": "Negative",
+            "true_sentiment": "Negative",
+            "justification": "The sentiment is negative because the employee was unable to satisfy the customer's expectation for a quicker refund, resulting in an unresolved issue."
+        }
+    ],
+    "English": [
+        {
+            "summary": "The customer called about a billing discrepancy on their last invoice. The support agent reviewed the charges, confirmed an error, and issued a refund. The customer thanked the agent for resolving the issue quickly.",
+            "predicted_sentiment": "Positive",
+            "true_sentiment": "Positive",
+            "justification": "A resolution to concern (billing inquiry) results in gratitude from client."
+        },
+        {
+            "summary": "The customer was frustrated due to repeated internet outages. The support agent apologized and escalated the issue to the technical department, but no immediate fix was available.",
+            "predicted_sentiment": "Negative",
+            "true_sentiment": "Negative",
+            "justification": "Despite receiving an apology from a representative of the help desk who offered future follow-up with better service information after escalating her problem for resolution (i.e., having it investigated by someone on staff that might know more about what caused such poor performance, and fixing whatever issues came up), Mrs. Hensley was frustrated because there appeared to be no indication at all as yet when the technical department would get back to her next."
+        },
+        {
+            "summary": "The customer asked how to reset their account password. The support agent walked them through the process successfully without issue.",
+            "predicted_sentiment": "Positive",
+            "true_sentiment": "Neutral",
+            "justification": "As indicated by 'asked' and succeeded', this conversation summary suggests a positive sentiment because it illustrates an efficient interaction where assistance was provided effectively, which satisfies (or better) the user's need."
+        },
+        {
+            "summary": "The customer complained about poor service at a physical store location. The agent documented the complaint and assured them it would be forwarded to management, but the customer remained dissatisfied.",
+            "predicted_sentiment": "Negative",
+            "true_sentiment": "Negative",
+            "justification": "In summary of customer's conversation with an agent; 'the customer' refers to me here and they have a poor experience at a store and are displeased even after being promised help from management, making their sentiment negative."
+        },
+        {
+            "summary": "The customer inquired about upgrading their subscription plan. The support agent explained available options, and the customer agreed to upgrade.",
+            "predicted_sentiment": "Positive",
+            "true_sentiment": "Positive",
+            "justification": "Customer was satisfied with Agent's explanation of various plans which led them agreeing for a upgrade."
+        },
+        {
+            "summary": "The customer was confused about a promotional offer they received. The agent clarified the terms, and the customer said they would think about it before deciding.",
+            "predicted_sentiment": "Neutral",
+            "true_sentiment": "Neutral",
+            "justification": "Although there is initial confusion which could be seen as negative, since there's an opportunity to clarify (implied by the positive action of offering clarification), combined with a decision pending that indicates no immediate positivity or negativity yet."
+        },
+        {
+            "summary": "The customer had been charged after canceling a service. The agent verified the timeline, apologized, and processed a full refund. The customer appreciated the resolution.",
+            "predicted_sentiment": "Positive",
+            "true_sentiment": "Positive",
+            "justification": "After initial dissatisfaction due to being overcharged for canceled services ('Negative'), satisfaction was expressed because of good handling by an empathetic service representative offering apologies, validation of mistake, and efficient actions leading towards a full refund."
+        },
+        {
+            "summary": "The customer wanted to transfer their service to a new address, but the agent informed them the service wasn\u2019t available in that area. The customer expressed disappointment.",
+            "predicted_sentiment": "Negative",
+            "true_sentiment": "Negative",
+            "justification": "Disappointed by unavailable services at desired location"
+        },
+        {
+            "summary": "The customer called to check the status of a delayed shipment. The agent provided tracking details and estimated delivery. The customer acknowledged the update and ended the call politely.",
+            "predicted_sentiment": "Positive",
+            "true_sentiment": "Neutral",
+            "justification": "Despite mentioning 'delayed' in their summary, which hints at inconvenience or dissatisfaction regarding shipping time, overall sentiment is positive due to agent's helpfulness (providing tracking details) resulting in customer politeness and likely satisfaction during the call."
+        },
+        {
+            "summary": "The customer praised a previous support experience and called to give positive feedback. The agent thanked them and filed the compliment.",
+            "predicted_sentiment": "Positive",
+            "true_sentiment": "Positive",
+            "justification": "customer gives appreciation thus expressing happiness, which makes sentiment:positive."
+        },
+        {
+            "summary": "The customer called to complain about being charged twice. After a long investigation, it turned out they had subscribed with two different emails. The customer seemed embarrassed but appreciated the clarity.",
+            "predicted_sentiment": "Positive",
+            "true_sentiment": "Neutral",
+            "justification": "Despite initially complaining and showing embarrassment for double subscribing due to miscommunication from their end ("
+        },
+        {
+            "summary": "The customer was upset about a technician not showing up for an appointment. The agent offered to reschedule with priority, but the customer said they\u2019d \u201cthink about staying with the company.\u201d",
+            "predicted_sentiment": "Neutral",
+            "true_sentiment": "Negative",
+            "justification": "Despite customer's initial frustration due to no-shows by technicians (which can be negative), we see that there's a possibility of continued support ('they'd think about staying with the company'). No strong positive or conclusive resolution is stated, keeping it neutral."
+        },
+        {
+            "summary": "The customer had a feature request that\u2019s not supported. The agent politely noted it as feedback, but the customer insisted on knowing why it's not implemented. The agent remained calm, but the customer left unconvinced.",
+            "predicted_sentiment": "Negative",
+            "true_sentiment": "Neutral",
+            "justification": "Although the conversation ended without any obvious conflict or complaint from either party (suggesting neutral to positive sentiment), we see that there was some level of dissatisfaction expressed through words like 'insisted', 'not implemented' and being left unconvinced. There is no clear expression of happiness, satisfaction leading us towards a Negative sentiment overall."
+        },
+        {
+            "summary": "A customer reported receiving the wrong item. The agent processed a replacement immediately, but the customer said, \"This keeps happening with you guys,\" though they still accepted the solution.",
+            "predicted_sentiment": "Neutral",
+            "true_sentiment": "Negative",
+            "justification": "The sentiment is neutral because while there may have been previous issues (mentioned as 'this keeps happening'), indicating a negative aspect of their experience towards that company, ultimately leading to acceptance and satisfaction with obtaining another item shows resolve on the positive side."
+        },
+        {
+            "summary": "The customer called to cancel their subscription. The agent asked a few questions and discovered the issue was due to a misunderstanding. The customer agreed to stay after clarification.",
+            "predicted_sentiment": "Positive",
+            "true_sentiment": "Positive",
+            "justification": "While initially intending to leave (cancel), it turns out that there is nothing fundamentally wrong with their subscription hence staying leads positively."
+        }
+    ]
+}
