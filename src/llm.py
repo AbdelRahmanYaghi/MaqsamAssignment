@@ -28,16 +28,9 @@ def query_sentiment_llm(summary: str, model_name: str = "qwen3:8b", return_justi
         return_justification (bool): If the justification it needed from the model, set it to true.
         
     Return:
-        sentiment ("Positive" | "Negative" | "Neutral"): The sentiment classified by the model.
+        sentiment (str["Positive" | "Negative" | "Neutral"]): The sentiment classified by the model.
         sentiment_justification: (Optional[str]): Justification for the sentiment classified.
-        
-    Raises:
-        ...
-    '''
-    URL = "http://localhost:11434/v1" # GPT-GENERATED >> Forgot that I have to put /v1 to make it work
-
-    client = OpenAI(base_url=URL, api_key='ollama')
-        
+    '''    
     try:
         out = client.beta.chat.completions.parse(
             model=model_name,

@@ -22,4 +22,4 @@ class SentimentResultWithJustification(SentimentResult):
         
         ```Trivedi, P., Gulati, A., Molenschot, O., Rajeev, M. A., Ramamurthy, R., Stevens, K., ... & Rajani, N. (2024). Self-rationalization improves llm as a fine-grained judge. arXiv preprint arXiv:2410.05495.```
     """
-    sentiment_justification: Optional[str]
+    sentiment_justification: str

@@ -23,7 +23,6 @@ def predicted_positives(label, model_results):
 def actual_positives(label, model_results):
     """Actually were `label`, regardless of prediction."""
     return sum(1 for row in model_results if row['true_sentiment'] == label)
-# ################################################
 
 criterias = {
     "Accuracy": lambda model_results: 
