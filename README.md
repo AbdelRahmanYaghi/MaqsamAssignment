@@ -12,7 +12,7 @@ Since I'll be using an LLM, a valid and safe choice to use will be Ollama. It do
 ### LLM Selection
 Since I'll be using Ollama for my model deployment, it does limit the models I can use. From the models I was able to run, I had GPT generate me a list of 30 different example summaries with their sentiment, and their language. These could be found in `llm_tests/call_summaries_sentiment.csv`. The testing was carried out on 2 different phases (Using 2 different scripts). The tests were carried out on a 4060 8GB GPU.
 
-1. **Phase 1: Creating the model output results**
+1. **Phase 1: Creating the model output results** ` python -m llm_tests.create_results`
 
 In this phase, I simply create a simple jsons following the following format:
 ```json
@@ -28,7 +28,7 @@ In this phase, I simply create a simple jsons following the following format:
 }
 ```
 
-2. **Phase 2: Scoring the results**
+2. **Phase 2: Scoring the results** ` python -m llm_tests.score_results`
 
 In this phase, I use multiple scoring methods on the results from the first phase. The reason behind splitting these into two phases is because using only accuracy as a metric will not be entirely accurate for such a use-case. For example, if the model predicted `Postive` and the true value was `Negative` should not be treated as equal as if the model predicted `Postive` and the true value was `Neutral`. Therefore, I wanted to test and research around differnt metrics. Here is an overview of the results generated in `llm_tests/models_scores.json` which includes all the scores in details per language and per metric.
 
