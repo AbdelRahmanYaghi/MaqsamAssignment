@@ -1,3 +1,6 @@
+from dotenv import load_dotenv
+load_dotenv()
+
 from src.models import TranscriptionSummary, SENTIMENTS
 from src.llm import query_sentiment_llm
 from src.log_config import setup_logging, get_logger
