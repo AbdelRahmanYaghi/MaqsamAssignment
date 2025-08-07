@@ -1,7 +1,18 @@
 from pydantic import BaseModel
-from typing import Literal
 
+from typing import Literal, Optional
+
+SENTIMENTS = Literal[ "Positive", "Negative", "Neutral"]
+
+class TranscriptionSummary(BaseModel):
+    """ Transcription summary model for fastapi post. """
+    summary: str
+    
 class SentimentResult(BaseModel):
+    """ Sentiments """
+    sentiment: SENTIMENTS
+    
+class SentimentResultWithJustification(SentimentResult):
     """ Sentiment output format for the model.
     
         We are including a sentiment_justification despite not actually using it.
@@ -11,5 +22,4 @@ class SentimentResult(BaseModel):
         
         ```Trivedi, P., Gulati, A., Molenschot, O., Rajeev, M. A., Ramamurthy, R., Stevens, K., ... & Rajani, N. (2024). Self-rationalization improves llm as a fine-grained judge. arXiv preprint arXiv:2410.05495.```
     """
-    sentiment: Literal[ "Positive", "Negative", "Neutral"]
-    sentiment_justification: str
+    sentiment_justification: Optional[str]
