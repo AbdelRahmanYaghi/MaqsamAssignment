@@ -153,11 +153,9 @@ $$cost_{dedicated}(i) = \sum_{i \in U}3*0.69*ceil(i/30)$$
 
     Also, I am assuming that we want to process each request live, and cannot just store them in memory and crone-job them all at once. If that were the case, then life would be much easier to calculate. And dedicated would be more fitting for that case. 
 
-
-
 For the **AWS lambda function**, its cost can be calculated using [their website](https://calculator.aws/#/createCalculator/Lambda). Given these assumptions:
 - Region: Frankfurt
-- 45,000 requests per month (1500 * 30)
+- 45,000 requests per month (1500 users * 30 days)
 - 8000 ms Request time
 - 2048 Memory
 
@@ -167,4 +165,25 @@ The cost will come to 12.02$/month
 
 Regarding the varying loads, the tools I have mentioned all support automatic scaling based on usage. And regarding evolving the model, it can easily be evolved by adding more AWS lambda function querying the LLM for different use cases.
 
+# Task 3: Summarization model
+## Data selection
+We have 3 approaches of obtaining the data. They can either be very expensive, but also very high quality, or vice versa.
 
+1. **Human Generated Data - Most Expensive**: This approach produces the most clean and highest quality data, however, it does come at a cost, and at a great one at that. Unfortunatly, or fortunatly, I never had to use this approach, hence I can't elaborate any further, like providing an expected price for this. However, a good approach is a hybrid approach between this approach and the next one, which I will go over in the next point.
+
+2. **LLM Generated Data - Mid Quality/Price**: 
+    This approach is what I usually go for. It depends on a lot of factors such as the system prompt, the model used, the tools provided to the model, helper functions that wrap the generation, etc.. It produces satisfactory data, with a risk of duplicated or very similar data points. Regarding its cost, assuming we are using an OpenAI model rather than a local model, such as gpt 4o-mini, it would cost around:
+    $$Datapoint = (2048 * (0.15/1,000,000)) + ((256 + 64) * (0.6/1,000,000)) $$ 
+    Assuming:
+
+    - 2048 is the size of the system prompt
+    - 256 is the input transcription (Deducted from the examples provided in the assignment)
+    - 64 is the output summary (Deducted from the examples provided in the assignment)
+
+    Meaning each data point costs 0.0004992$. So if we ended up training an 8B model, we might need anywhere between 1000-10000 datapoints depending on their quality, which would cost between ~0.5-5 dollars.
+
+    Despite 1000 datapoints seeming not much, it has been agreed upon that high quality with low datapoints is generally better than low quality with high datapoints. Here is the paper "[60 Data Points are Sufficient to Fine-Tune LLMs for Question-Answering](https://arxiv.org/abs/2409.15825)" which is self explainatory from the title. I am aware that Question answering is generally less complex than summarization, but point still stands. And in the [Meta llama finetuning docs](https://llama.developer.meta.com/docs/features/fine-tuning), it literally says that "Your fine-tuning dataset should have at least 10 examples, but you will likely get better results with at least several hundred examples."
+
+    I suggested in the previous point that having a hybrid solution between the two approaches would work best, and that is generating a few hundred datapoints, and then having a human / set of humans validate the datapoint and ensure that they are high quality.
+
+3. **Huggingface**: Huggingface contains a large amount of datasets ready to be used for finetuning for free. However, the problem with this approach is that the data rarely is specific for your usecase.
