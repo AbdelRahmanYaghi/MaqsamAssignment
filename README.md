@@ -111,7 +111,8 @@ For the **LLM inference**, we will not be using the dedicated server because it 
 
 All the calculations above were calculated using the "Flex" workers, which are the more expensive workers that are used at times of spikes in usage.
 
-For the **AWS lambda function**, its cost can be calculated using their website. Given these assumptions:
+For the **AWS lambda function**, its cost can be calculated using [their website](https://calculator.aws/#/createCalculator/Lambda). Given these assumptions:
+- Region: Frankfurt
 - 45,000 requests per month (1500 * 30)
 - 8000 ms Request time
 - 2048 Memory
