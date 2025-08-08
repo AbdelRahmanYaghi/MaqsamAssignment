@@ -165,7 +165,6 @@ The cost will come to 12.02$/month
 
 ## Load and Evolving
 
-And thanks to it being serverless, even if usage were to spike at any point, the only worry we could have is haivng a cold start from having RunPod initliaze a new GPU. In addition to that, even adding new features should only consist of creating new serverless function (on AWS or GCP for example) that use LLM deployed on RunPod.
-
+Regarding the varying loads, the tools I have mentioned all support automatic scaling based on usage. And regarding evolving the model, it can easily be evolved by adding more AWS lambda function querying the LLM for different use cases.
 
 
