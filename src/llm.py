@@ -3,6 +3,7 @@ from src.log_config import get_logger
 from src.helper import process_download_streaming_response
 
 from openai import OpenAI
+import requests
 
 import json
 import os
@@ -17,7 +18,7 @@ else:
     logger.error(f"Couldn't find system prompt at src/prompts/SENTIMENT_ANALYSIS_SYS_PROMPT.md", exc_info=True)
     raise FileExistsError("Couldn't find SENTIMENT_ANALYSIS_SYS_PROMPT.md in src/prompts")
 
-client = OpenAI(base_url=os.getenv("LLM_URL"), api_key='ollama')
+client = OpenAI(base_url=os.getenv("LLM_URL") + "/v1", api_key='ollama')
 logger.info("Successfully initialized Ollama model")
 
 def verify_model_pulled(model_name: str) -> dict:
@@ -75,16 +76,10 @@ def query_sentiment_llm(summary: str, model_name: str = os.getenv("OLLAMA_MODEL"
             ],
             response_format=SentimentResultWithJustification
         )
-    except ConnectionError as e:
-        logger.error(f"Failed reaching the Ollama server. {e}")    
-        raise ConnectionError("Faced an error sending a request to LLM server.")
-    except TimeoutError as e:
-        logger.error(f"Timed out while reaching the Ollama server. {e}")    
-        raise TimeoutError("Request timed out.")
-    except Exception as e:
-        logger.error(f"Unexpected LLM request error. {e}")
-        raise RuntimeError(f"Unexpected LLM request. Something went wrong. {e}")
-
+    except (requests.RequestException, TimeoutError, ConnectionError) as e:
+        logger.error(f"Failed to query LLM model {model_name}: {e}", exc_info=True)
+        raise
+    
     if return_justification:
         return SentimentResultWithJustification(**json.loads(out.choices[0].message.content))
     
