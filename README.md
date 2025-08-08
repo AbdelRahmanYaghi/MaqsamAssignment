@@ -2,12 +2,51 @@
 ## Assumptions
 * In the assignment, it says that `open-source self-hosted *LLM*`, which implies that the use of Language models specified for sentiment analysis is not allowed. Hence, I've used a conversational LLM to fit the criteria based on my understanding.
 
-## Notes
-* I would like to state that every line of code here was written purely by hand. If a line (Or a chunk of code) was GPT generated, it will have a comment next to it stating so. The reason for this "No AI limitation" that I have setup upon myself is that one of my strong suits that I take pride in is writing clean, compact, and understandable code after roughly 8 years of coding. I fully understand that using AI is fully, and is meant to accelerate work and efficiency and is even required to keep up with the competition these days, however, for AI to write "reliable" code, it must be used in the context of clean code.
+## How to run
+### Installation
+Thanks to docker, you can easily run this program using 2 simple commands.
+
+1. Clone the repo: ```git clone https://github.com/AbdelRahmanYaghi/MaqsamAssignment.git```
+2. Change directory to the cloned directory: ```cd MaqsamAssignment```
+2. Run the docker compose file: ```docker compose up --build```
+
+### POST - /query_sentiment
+**Accepts**: 
+    
+    - summary (str): A string in English or Arabic containing the transription summary
+
+**Returns**: 
+
+    - Sentiment (str): A literal choice of "Positive", "Negative", "Neutral"
+
+Using curl:
+```bash
+curl \
+  'http://localhost:8000/query_sentiment' \
+  -H 'accept: application/json' \
+  -H 'Content-Type: application/json' \
+  -d '{
+  "summary": "Lorum ipsum..."
+}'
+```
+Using python:
+```py
+import requests
+import json
+
+res = requests.post(
+    'http://localhost:8000/query_sentiment',
+     data=json.dumps(
+        {"summary": "Lorum ipsum..."}
+    )
+)
+
+print(res.content)
+```
 
 ## Methodology
-### Inference tool selection
-Since I'll be using an LLM, a valid and safe choice to use will be Ollama. It does limit the model selection, especially that a lot of the newer models (e.g. SmolLM3) I wanted to use originally are incompatible with the latest version of Ollama (0.11.3) which caused some issues.
+### LLM Inference tool selection
+Since I'll be using an LLM, a valid and safe choice to use will be Ollama. It does limit the model selection, especially that a lot of the newer models (e.g. SmolLM3) I wanted to use originally are incompatible with the latest version of Ollama (0.11.3) which caused some issues. On the other hand, it is easy, fast, and relatively small in size.
 
 ### LLM Selection
 Since I'll be using Ollama for my model deployment, it does limit the models I can use. From the models I was able to run, I had GPT generate me a list of 30 different example summaries with their sentiment, and their language. These could be found in `llm_tests/call_summaries_sentiment.csv`. The testing was carried out on 2 different phases (Using 2 different scripts). The tests were carried out on a 4060 8GB GPU.
@@ -40,4 +79,11 @@ In this phase, I use multiple scoring methods on the results from the first phas
 | gemma3:4b | 0.6667 | 6.0 | 0.6796 | 0.6667 | **__1.12 seconds__** |
 | hf.cotensorblockPhi-4-mini-instruct-abliterated-GGUF:Q8_0 | 0.6333 | 5.5 | 0.5079 | 0.6333 | 1.26 seconds |
 
-I ended up using ***qwen3:8b*** since it had the perfect balance between an acceptable score and good time/request.
+I ended up using ***qwen3:8b*** since it had the perfect balance between an acceptable score (in both English and Arabic) and good time/request.
+
+### Endpoints setup
+For creating the endpoints, I've used Fastapi. Its reliable, fast, and offers the swagger gui which makes it slightly easier to test my endpoints. For running the endpoint, I used uvicorn ASGI since its slighlt less heavy than installing fastapi[cli].
+
+
+
+
