@@ -1,4 +1,4 @@
-# Task 1
+# Task 1 - Sentiment Prediciton Model
 ## Assumptions
 * In the assignment, it says that `open-source self-hosted *LLM*`, which implies that the use of Language models specified for sentiment analysis is not allowed. Hence, I've used a conversational LLM to fit the criteria based on my understanding.
 
@@ -84,6 +84,43 @@ I ended up using ***qwen3:8b*** since it had the perfect balance between an acce
 ### Endpoints setup
 For creating the endpoints, I've used Fastapi. Its reliable, fast, and offers the swagger gui which makes it slightly easier to test my endpoints. For running the endpoint, I used uvicorn ASGI since its slighlt less heavy than installing fastapi[cli].
 
+
+# Task 2 - Prod Design Document
+## LLM Inference
+While I can just deploy my docker compose on an EC2 instance and call it a day, many points to consider will be missed, leading to ineffcient use of the tools available. For example, if we use [RunPod.io](https://www.runpod.io/), we could deploy our LLM model more effectivly thanks to their [cost-optimized AI model serving](https://www.runpod.io/use-cases/inference). This allows our LLM to be both cost-effcient, while having the scaling required to serve any number of users. We could even go for a serverless inference which avoids idle GPU costs. (I apologize if this sounds like an advertisment for runpod, it's just a good service.)
+
+
+<img src="images/LLM_inference.png" alt="LLM inference" width="60%" />
+
+## Endpoint
+For the endpoint, an easy and safe choice would be using a serverless function cloud provider, such as AWS lambda or Google's Cloud Run functions. The reason behind choosing a serverless function cloud provider rather than a serverful is that it is generally cheaper, and should work perfectly for our usecase, which in this case would literally only be a fastapi endpoint that requests from another endpoint (The LLM over at Runpod). And despite serverless functions usually having a problem with cold starts, AWS lambda and Cloud Run functions are optimized to reduce this issue significantly.
+
+## Cost Estimation
+For the cost estimation, I'll have to assume the 1500 users are using the service per day.
+
+For the **LLM inference**, we will not be using the dedicated server because it is less effecient for inference, so instead we will go for the serverless option, which is cheaper, and more effecient: 
+
+    Lets assume that we are using a serverless 4090 from RunPod. A 4090 server would cost $1.10/hr. We also have to assume that the average request takes a maximum 8 seconds (In reality it will only take around 5). Doing very simple math with this information:
+
+    - 1500 Users/day
+    - Each user causes the model to be used for 8 seconds
+    - $0.00031/s for model usage
+
+    1500 * 8 = 12,000 seconds of model usage
+    12,000 * 0.00031 = 3.72$/day OR 111.6$/month
+
+All the calculations above were calculated using the "Flex" workers, which are the more expensive workers that are used at times of spikes in usage.
+
+For the **AWS lambda function**, its cost can be calculated using their website. Given these assumptions:
+- 45,000 requests per month (1500 * 30)
+- 8000 ms Request time
+- 2048 Memory
+
+The cost will come to 12.02$/month
+
+## Load and Evolving
+
+And thanks to it being serverless, even if usage were to spike at any point, the only worry we could have is haivng a cold start from having RunPod initliaze a new GPU. In addition to that, even adding new features should only consist of creating new serverless function (on AWS or GCP for example) that use LLM deployed on RunPod.
 
 
 
