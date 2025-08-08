@@ -1,5 +1,6 @@
 from src.models import SentimentResult, SentimentResultWithJustification
 from src.log_config import get_logger
+from src.helper import process_download_streaming_response
 
 from openai import OpenAI
 
@@ -19,7 +20,41 @@ else:
 client = OpenAI(base_url=os.getenv("LLM_URL"), api_key='ollama')
 logger.info("Successfully initialized Ollama model")
 
-def query_sentiment_llm(summary: str, model_name: str = "qwen3:8b", return_justification: bool = False) -> SentimentResult:
+def verify_model_pulled(model_name: str) -> dict:
+    '''
+    Given an Ollama model's name, the function verifies its downloaded.
+    If the model is not donwloaded, then it is downloaded.
+    
+    Args:
+        model_name (str): The name of the Ollama model.
+        
+    Return:
+        message (str): Status whether the model has been donwload yet.
+        
+    '''
+        
+    downloaded_models = requests.get(os.getenv("LLM_URL") + "/api/tags").json()
+    if model_name not in [model['name'] for model in downloaded_models['models']]:
+        logger.info(f"Model {model_name} not found. Downloading...")
+        
+        
+        try:
+            response = requests.post(
+                url=os.getenv("LLM_URL") + "/api/pull",
+                data=json.dumps({"model":model_name}),
+                headers={"Content-Type": "application/json"},
+                stream=True)
+            
+            return process_download_streaming_response(response, model_name)
+                
+        except (requests.RequestException, TimeoutError, ConnectionError) as e:
+            logger.error(f"Failed to query LLM model {model_name}: {e}", exc_info=True)
+            raise
+              
+    else:
+        return {"message": "Model already downloaded"}
+
+def query_sentiment_llm(summary: str, model_name: str = os.getenv("OLLAMA_MODEL"), return_justification: bool = False) -> SentimentResult:
     '''
     Passes a transcription summary to an LLM with a system prompt to classify its sentiment.
     

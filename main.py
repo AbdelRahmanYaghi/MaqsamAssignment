@@ -2,14 +2,32 @@ from dotenv import load_dotenv
 load_dotenv()
 
 from src.models import TranscriptionSummary, SENTIMENTS
-from src.llm import query_sentiment_llm
+from src.llm import query_sentiment_llm, verify_model_pulled
 from src.log_config import setup_logging, get_logger
 
+from contextlib import asynccontextmanager
 from fastapi import FastAPI 
+
+import os
 
 setup_logging()
 logger = get_logger(__name__)
-app = FastAPI()
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+
+    print("Application startup: Initializing resources...")
+    verify_model_pulled(os.getenv("OLLAMA_MODEL"))
+
+    yield
+
+    print("Application shutdown: Cleaning up resources...")
+
+app = FastAPI(lifespan=lifespan)
+
+@app.get("/verify_model")
+def download_model(model_name):
+    return verify_model_pulled(model_name)
 
 @app.post("/query_sentiment")
 def query_sentiment(body: TranscriptionSummary) -> SENTIMENTS:
