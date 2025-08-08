@@ -18,6 +18,7 @@ services:
       - "11434:11434"
     volumes:
       - ollama_models:/root/.ollama
+    runtime: nvidia
 
 volumes:
   ollama_models:
