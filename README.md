@@ -187,3 +187,18 @@ We have 3 approaches of obtaining the data. They can either be very expensive, b
     I suggested in the previous point that having a hybrid solution between the two approaches would work best, and that is generating a few hundred datapoints, and then having a human / set of humans validate the datapoint and ensure that they are high quality.
 
 3. **Huggingface**: Huggingface contains a large amount of datasets ready to be used for finetuning for free. However, the problem with this approach is that the data rarely is specific for your usecase.
+
+## Model training:
+For choosing a model, I would test a set of LLMs on a summarization task by configuring them to summarization via a system prompt. That would help me get a better understanding of what models naturally exceed at the summarization task. I will evaluate the models using the evaulation methods I will propose the next section. Some good candidates in mind are:
+-  qwen3:8b
+-  llama3.1:8b
+-  smollm3:8b
+
+I am considering these models because I am assuming that I am not provided with expensive infrastructure. However, if I were provided with the neccesary funding for training the model then I would, funnily enough, go back to RunPod since it does provide infrastrucre for fine-tuning. And it is quite simple, all you need is an SSH connection and around 50$, which allows the renting of a 5090 (32Gb VRAM) or a L40 (48Gb VRAM) for around 60 hours. That should be enough for training a slightly larger model such as the new OpenAI Open source LLM, GPT-OSS, which is around 18 GBs. The reason behind choosing GPT-OSS as the slightly larger model to train is because it offers great reasoning capabilities based on personally testing it recently. 
+
+If I trained a larger model, then I would probably use Low rank adaptation because I do not want to influence the model's reasoning capablities too much by effecting all the layers in the model, and so I want to ensure the model's stability, it is the safer option that could provide better overall rather than training the entire model.
+
+Another approach I could give a shot is training an seperate adapter which could then be used along the side.
+
+I am not worried so much about the Arabic and English language aspect since all the models I have mentioned are multilingual, and naturally capable of understanding both English and Arabic. 
+
