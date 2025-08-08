@@ -25,10 +25,6 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(lifespan=lifespan)
 
-@app.get("/verify_model")
-def download_model(model_name):
-    return verify_model_pulled(model_name)
-
 @app.post("/query_sentiment")
 def query_sentiment(body: TranscriptionSummary) -> SENTIMENTS:
     '''
