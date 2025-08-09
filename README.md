@@ -204,12 +204,7 @@ I suggest following something similar to this format:
 Despite the language and the dialect not being used for training, they can be used to give valuable post training insight about the model's performance, or lack of, in certain dialects.
 
 ## Model training
-For choosing a model, I would test a set of LLMs on a summarization task by configuring them to summarization via a system prompt. That would help me get a better understanding of what models naturally exceed at the summarization task. I will evaluate the models using the evaulation methods I will propose the next section. Some good candidates in mind are:
--  qwen3:8b
--  llama3.1:8b
--  smollm3:8b
-
-I am considering these models because I am assuming that I am not provided with expensive infrastructure. However, if I were provided with the neccesary funding for training the model then I would, funnily enough, go back to RunPod since it does provide infrastrucre for fine-tuning. And it is quite simple, all you need is an SSH connection and around 50$, which allows the renting of a 5090 (32Gb VRAM) or a L40 (48Gb VRAM) for around 60 hours. That should be enough for training a slightly larger model (The ones metioned previously but with larger size or) such as the new OpenAI Open source LLM, GPT-OSS, which is around 18 GBs. The reason behind choosing GPT-OSS as the slightly larger model to train is because it offers great reasoning capabilities based on personally testing it recently.  In addition to that, all GPT models can handle different Arabic accents. This model might obiously not have this ability, which is worth testing for.
+For choosing a model, I would test a set of LLMs on a summarization task by configuring them to summarization via a system prompt. That would help me get a better understanding of what models naturally exceed at the summarization task. I will evaluate the models using the evaulation methods I will propose the next section. A good candidates in mind for a small LLM is qwen3:8b. Since I am assuming I am not provided with expensive infrastructure, I can finetune that model easily. However, if I were provided with the neccesary funding for training the model then I would, funnily enough, go back to RunPod since it does provide infrastrucre for fine-tuning. And it is quite simple, all you need is an SSH connection and around 50$, which allows the renting of a 5090 (32Gb VRAM) or a L40 (48Gb VRAM) for around 60 hours. That should be enough for training a slightly larger model (The ones metioned previously but with larger size or) such as the new OpenAI Open source LLM, GPT-OSS, which is around 18 GBs. The reason behind choosing GPT-OSS as the slightly larger model to train is because it offers great reasoning capabilities based on personally testing it recently.  In addition to that, all GPT models can handle different Arabic accents. This model might obiously not have this ability, which is worth testing for.
 
 If I trained a larger model, then I would probably use Low rank adaptation because I do not want to influence the model's reasoning capablities too much by effecting all the layers in the model, and so I want to ensure the model's stability, it is the safer option that could provide better results overall rather than training the entire model. Another approach I could give a shot is training an seperate adapter which could then be used along the side.
 
@@ -222,7 +217,7 @@ All the methods here will be using the "evaluating data" mentioned in the data g
 ### Intersection of tokens (ROUGE-X)
 A method for evaluating a summarization model is creating a set containing all the tokens in the true output text, and another set containing all the tokens in the generated summarized text. Then, intersecting these two sets and checking the number of intersected tokens. This approach is (ROUGE-1), and we can obviously expand upon that to test for (ROUGE-2, ROUGE-K).
 
-### Humal Eval
+### Human Eval
 As always, this is the most accurate method, yet it's unfeasible because of its cost, and because of the subjectivity of the different humans.
 
 ### Semantic Textual Similarity
