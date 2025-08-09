@@ -171,7 +171,7 @@ We have 3 approaches of obtaining the data. They can either be very expensive, b
 
 1. **Human Generated Data - Most Expensive**: This approach produces the most clean and highest quality data, however, it does come at a cost, and at a great one at that. Unfortunatly, or fortunatly, I never had to use this approach, hence I can't elaborate any further, like providing an expected price for this. However, a good approach is a hybrid approach between this approach and the next one, which I will go over in the next point.
 
-2. **LLM Generated Data - Mid Quality/Price**: 
+2. **LLM Generated Data - Mid Quality/Price**:
     This approach is what I usually go for. It depends on a lot of factors such as the system prompt, the model used, the tools provided to the model, helper functions that wrap the generation, etc.. It produces satisfactory data, with a risk of duplicated or very similar data points. Regarding its cost, assuming we are using an OpenAI model rather than a local model, such as gpt 4o-mini, it would cost around:
     $$Datapoint = (2048 * (0.15/1,000,000)) + ((256 + 64) * (0.6/1,000,000)) $$ 
     Assuming:
@@ -188,17 +188,54 @@ We have 3 approaches of obtaining the data. They can either be very expensive, b
 
 3. **Huggingface**: Huggingface contains a large amount of datasets ready to be used for finetuning for free. However, the problem with this approach is that the data rarely is specific for your usecase.
 
-## Model training:
+Whichever method we end up using, it would be a good idea to generate/obtain more datapoints which will be used in evaluating a metric. A good ratio between training, testing, and evaluating data is 7:2:1 respectively. 
+
+### Data schema/format
+I suggest following something similar to this format:
+```json
+{
+    "transcription_id": "str",
+    "transcription_text": "str",
+    "Lanuage": "Literal[English, Arabic]",
+    "Dialect": "Literal[Levant, Gulf, Egypt, Darija]",
+    "transcription_summary": "str"
+}
+```
+Despite the language and the dialect not being used for training, they can be used to give valuable post training insight about the model's performance, or lack of, in certain dialects.
+
+## Model training
 For choosing a model, I would test a set of LLMs on a summarization task by configuring them to summarization via a system prompt. That would help me get a better understanding of what models naturally exceed at the summarization task. I will evaluate the models using the evaulation methods I will propose the next section. Some good candidates in mind are:
 -  qwen3:8b
 -  llama3.1:8b
 -  smollm3:8b
 
-I am considering these models because I am assuming that I am not provided with expensive infrastructure. However, if I were provided with the neccesary funding for training the model then I would, funnily enough, go back to RunPod since it does provide infrastrucre for fine-tuning. And it is quite simple, all you need is an SSH connection and around 50$, which allows the renting of a 5090 (32Gb VRAM) or a L40 (48Gb VRAM) for around 60 hours. That should be enough for training a slightly larger model such as the new OpenAI Open source LLM, GPT-OSS, which is around 18 GBs. The reason behind choosing GPT-OSS as the slightly larger model to train is because it offers great reasoning capabilities based on personally testing it recently. 
+I am considering these models because I am assuming that I am not provided with expensive infrastructure. However, if I were provided with the neccesary funding for training the model then I would, funnily enough, go back to RunPod since it does provide infrastrucre for fine-tuning. And it is quite simple, all you need is an SSH connection and around 50$, which allows the renting of a 5090 (32Gb VRAM) or a L40 (48Gb VRAM) for around 60 hours. That should be enough for training a slightly larger model (The ones metioned previously but with larger size or) such as the new OpenAI Open source LLM, GPT-OSS, which is around 18 GBs. The reason behind choosing GPT-OSS as the slightly larger model to train is because it offers great reasoning capabilities based on personally testing it recently.  In addition to that, all GPT models can handle different Arabic accents. This model might obiously not have this ability, which is worth testing for.
 
-If I trained a larger model, then I would probably use Low rank adaptation because I do not want to influence the model's reasoning capablities too much by effecting all the layers in the model, and so I want to ensure the model's stability, it is the safer option that could provide better overall rather than training the entire model.
-
-Another approach I could give a shot is training an seperate adapter which could then be used along the side.
+If I trained a larger model, then I would probably use Low rank adaptation because I do not want to influence the model's reasoning capablities too much by effecting all the layers in the model, and so I want to ensure the model's stability, it is the safer option that could provide better results overall rather than training the entire model. Another approach I could give a shot is training an seperate adapter which could then be used along the side.
 
 I am not worried so much about the Arabic and English language aspect since all the models I have mentioned are multilingual, and naturally capable of understanding both English and Arabic. 
 
+## Metrics
+
+All the methods here will be using the "evaluating data" mentioned in the data generation part as the true output.
+
+### Intersection of tokens (ROUGE-X)
+A method for evaluating a summarization model is creating a set containing all the tokens in the true output text, and another set containing all the tokens in the generated summarized text. Then, intersecting these two sets and checking the number of intersected tokens. This approach is (ROUGE-1), and we can obviously expand upon that to test for (ROUGE-2, ROUGE-K).
+
+### Humal Eval
+As always, this is the most accurate method, yet it's unfeasible because of its cost, and because of the subjectivity of the different humans.
+
+### Semantic Textual Similarity
+Using a sentence feature extractor model on the true output and the summarized text, and comparing the distance between the resulting embeddings. Or we can go with BERTScore which is slightly more general, and has more metrics.
+
+### Difference between summarized text sentiment and true output sentiment
+This approach is a little sketchy, and one has to assume no stochastic-ness from the sentiment prediction model, and the prediction model having perfect accuracy. This of course is unrealistic, however, this approach might provide to be useful for our specific use case.
+
+### Reverse the summarized text (Does not use true output)
+Using an LLM to generate a transcription based on the summary given, and then using one of the methods above, i.e., either embedding both transcriptions (The original one and the generated one) and finding the distance between the embedding, using ROUGE-K, or finding the difference between the two sentiments. 
+
+### Privacy Metrics
+I've noticed in the examples provided that the company/individual names are ommited from the output. I simple way we can test for the privacy is by using a Named Entity Recognition model to extract the company/individual from the original text and checking their existance in the summarized text.
+
+### Baseline
+All the results prior will be compared against a baseline of the testing done all the way in part 1 of the assingnment, where we tested the candidate model on summaring the text using a system prompt wihtout fine tuning. 
